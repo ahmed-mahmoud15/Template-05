@@ -377,7 +377,8 @@ footer p{
         margin: 3px
     }
     
-    form input:[type="text"], form input:[type="email"] {
+    form input[type="text"],
+    form input[type="email"]{
     width: 45%;
     }
     
