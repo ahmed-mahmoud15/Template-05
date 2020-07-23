@@ -1,0 +1,434 @@
+*{
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+body{
+    perspective: 800px;
+    margin: 0;
+    padding: 0
+}
+/* start header contain sidebar*/
+header{
+    width: 100%;
+    margin: 0;
+    background-color: #0FC9D2;
+    height: 50px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 800;
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+header p{
+    margin: 0;
+    padding: 15px;
+}
+
+header p span{
+    font-weight: 100
+}
+
+/* start sidebar*/
+
+input:first-child{
+    display: none
+}
+
+label i{
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FFF
+}
+
+header .sidebar label i{
+    position: relative;
+    left: 80%;
+    top: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #0FC6CF
+}
+
+
+header .sidebar{
+    background-color: #F7F7F7;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    right: -270px;
+    height: 625px;
+    background-attachment: fixed;
+    transition: all 7s ease-in-out;
+    box-shadow: -1px 0 20px #E9E9E9;
+    display: none;
+}
+
+#menu:checked ~ header .sidebar{
+    right: 0;
+    display: block;
+}
+
+header .sidebar ul li{
+    list-style: none;
+    text-transform: capitalize;
+    border-bottom: 1px solid #D7D7D7;
+    width: 80%;
+    padding: 20px 0;
+    transition:all .5s ease-in-out;
+    color: #363636;
+}
+
+header .sidebar ul li:last-of-type{
+    border: none
+}
+
+header .sidebar ul li a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 100
+}
+
+header .sidebar ul li:hover{
+    margin-left: 20px;
+    color: #0FC9D2
+}
+
+/* end sidebar , header and start main*/
+
+main{
+    background-image: url(https://cdn.pixabay.com/photo/2020/06/19/09/16/fantasy-5316369__340.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 600px
+}
+
+main h5{
+    color: #FFF;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    padding: 120px 0 60px
+}
+
+main h2{
+    color: #FFF;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50px;
+    padding: 30px 0
+}
+
+main p{
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    font-size: 20px
+}
+
+main i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #FFF;
+    background-color: #0FC9D2;
+    text-align: center;
+    padding: 14px;
+    font-size: 24px;
+    position: relative;
+    left: 49%;
+    margin: 30px 0
+}
+
+a .fa{
+    transition: background .5s ease-in-out
+}
+
+a .fa:hover{
+    background-color: #35ebf5
+}
+
+/* end main and start contenet*/
+
+.first,.second,.third,.fourth{
+    width: 70%;
+    margin: 100px auto;
+    background-color: #FFF;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px 50px #EBEBEB;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*first section*/
+
+.first .cont{
+    float: left;
+    width: 50%
+}
+
+.first .cont h3{
+    font-size: 40px;
+    font-weight: 100;
+    color: #363636;
+    padding: 110px 0 0
+}
+
+.first .cont p{
+    width: 80%;
+    margin: auto;
+    font-size: 15px;
+    color: #363636;
+    line-height: 30px;
+    padding: 50px 0
+}
+
+.first .cont i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #FFF;
+    background-color: #0FC9D2;
+    text-align: center;
+    padding: 14px;
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+.first img{
+    float: right;
+    width: 50%;
+    height: 600px;
+    cursor: pointer
+}
+
+/*second section*/
+
+.second h3{
+    font-size: 40px;
+    font-weight: 100;
+    color: #363636;
+    padding: 40px 0 0
+}
+
+.second p{
+    width: 80%;
+    margin: auto;
+    font-size: 15px;
+    color: #363636;
+    line-height: 30px;
+    padding: 50px 0
+}
+
+.second img{
+    width: 100%;
+    height: 500px;
+    cursor: pointer
+}
+
+.second i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #FFF;
+    background-color: #0FC9D2;
+    text-align: center;
+    padding: 14px;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/*third section , see first section */
+
+.third img{
+    float: left
+}
+
+/*fourth section , see second section */
+
+.fourth .wallper{
+    display: flex;
+    flex-wrap: wrap
+}
+
+.fourth .wallper .image-hidden img{
+    height: 400px;
+    transition: transform .5s ease-in-out;
+    display: block
+}
+
+.image-hidden{
+    overflow: hidden;
+}
+
+.fourth .wallper .image-hidden img:hover{
+    transform: scale(1.1)
+}
+
+.fourth .wallper .image-hidden:first-of-type{
+    flex-basis: 50%
+}
+
+.fourth .wallper .image-hidden:nth-of-type(2){
+    flex-basis: 50%
+}
+
+.fourth .wallper .image-hidden:nth-of-type(3){
+    flex-basis: 60%
+}
+
+.fourth .wallper .image-hidden:nth-of-type(4){
+    flex-basis: 40%
+}
+
+.fourth .wallper .image-hidden:nth-of-type(5){
+    flex-basis: 40%
+}
+
+.fourth .wallper .image-hidden:nth-of-type(6){
+    flex-basis: 60%
+}
+
+.fourth .wallper .image-hidden:last-of-type{
+    flex-basis: 100%
+}
+
+/*contact section*/
+
+.contact{
+    width: 40%;
+    margin: 100px auto;
+    background-color: #FFF;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px 50px #EBEBEB;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact h2{
+    font-size: 43px;
+    font-weight: 300;
+    color: #363636;
+    padding: 50px 0 0
+}
+
+.contact p{
+    width: 60%;
+    margin: auto;
+    font-size: 16px;
+    color: #363636;
+    line-height: 30px;
+    padding: 50px 0
+}
+
+.contact form label{
+    display: block;
+    font-size: 20px;
+    text-transform: capitalize;
+    line-height: 60px;
+    font-weight: 300
+}
+
+.contact form input,.contact form textarea{
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    font-size: 20px;
+    resize: none;
+    padding: 20px;
+    color: #363636
+}
+
+.contact form input:focus ,
+.contact form textarea:focus,
+form button{
+    outline: none;
+    border: 3px solid #0FC9D2
+}
+
+textarea{
+    height: 300px
+}
+
+form button{
+    background-color: #0FC9D2;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 5px;
+    margin: 50px 0;
+    transition: background .5s ease-in-out;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+form button:hover{
+    background-color: #35ebf5
+}
+
+/* end content and start footer*/
+
+footer{
+    width: 40%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+footer i{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 15px 0;
+    margin: 10px;
+    transition: .5s ease-in-out;
+    transition-property: color, border
+}
+
+footer i:hover{
+    color: #0FC9D2;
+    border-color: #0FC9D2
+}
+
+footer p{
+    color: #C1C1C1
+}
+
+/*media query*/
+
+@media only screen and (min-width: 600px) and (max-width: 1000px){
+    .first,.second,.third,.fourth,footer,.contact{
+        width: 90%
+    }
+    main i{
+        margin: auto
+    }
+    .first img {
+        float: none;
+        width: 100%;
+        height: 400px
+    }
+    .first .cont{
+        float: none;
+        width: 100%
+    }
+    header .sidebar{
+    height: 2000px;
+    }
+    .fourth .wallper .image-hidden:nth-of-type(n){
+    flex-basis: 100%
+}
+} 
